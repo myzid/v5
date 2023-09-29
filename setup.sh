@@ -198,15 +198,14 @@ echo -e "$green━━━━━━━━━━━━━━━━━━━━━�
     echo -e "$BGreen 1. Use Domain Script / Menggunakan Domain Script $NC"
     echo -e "$BGreen 2. Choose Your Own Domain / Menggunakan Domain Sendiri $NC"
     echo -e "$BYellow----------------------------------------------------------$NC"
-    read -rp " input 1 or 2 / pilih 1 atau 2 : " dns
-	if test $dns -eq 1; then
-    clear
+    read -p " input 1 or 2 / pilih 1 atau 2 : " dns
+1)  clear ;
     apt install jq curl -y
     wget -q -O /root/cf "${ZheeVPN}ssh/cf" >/dev/null 2>&1
     chmod +x /root/cf
     bash /root/cf | tee /root/install.log
-    print_success "Domain Random Done"
-	if test $dns -eq 2; then
+    print_success "Domain Random Done" ;;
+2)  clear ;
     read -rp "Enter Your Domain / masukan domain : " dom
     read -rp "Input ur ns-domain : " -e nsdomen
     echo "IP=$dom" > /var/lib/SIJA/ipvps.conf
@@ -253,7 +252,8 @@ Expired  : <code>$Exp</code>
 <i>Zhee_VPN</i>
 '&reply_markup={"inline_keyboard":[[{"text":"⚡ ORDER ⚡","url":"https://t.me/zheevpn"}]]}'
 "
-   curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+   curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null ;;
+esac
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install SSH / WS               $NC"
