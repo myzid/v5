@@ -70,6 +70,14 @@ PERMISSION () {
     BURIQ
 }
 
+PERMISSION
+if [ "$res" = "Expired" ]; then
+Exp="\e[36mExpired\033[0m"
+rm -f /home/needupdate > /dev/null 2>&1
+else
+Exp=$(curl -sS https://raw.githubusercontent.com/myzid/izin/main/ip | grep $MYIP | awk '{print $3}')
+fi
+
 # =========================================
 vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
 let vla=$vlx/2
@@ -297,7 +305,7 @@ echo -e "${BICyan} └───────────────────�
 echo -e "        ${BICyan}┌─────────────────────────────────────┐${NC}"
 echo -e "        ${BICyan}│$NC Version       : V1.01${NC}"
 echo -e "        ${BICyan}│$NC ${GREEN}User          :\033[1;36m $Name \e[0m"
-echo -e "        ${BICyan}│$NC Expired       : ${GREEN}$Exp ( $Exp2 ) $NC"
+echo -e "        ${BICyan}│$NC Expired       : ${GREEN}$Exp $NC"
 echo -e "        ${BICyan}└─────────────────────────────────────┘${NC}"
 echo
 read -p " Select menu : " opt
