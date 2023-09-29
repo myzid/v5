@@ -199,13 +199,13 @@ echo -e "$green━━━━━━━━━━━━━━━━━━━━━�
     echo -e "$BGreen 2. Choose Your Own Domain / Menggunakan Domain Sendiri $NC"
     echo -e "$BYellow----------------------------------------------------------$NC"
     read -p " input 1 or 2 / pilih 1 atau 2 : " dns
-1)  clear ;
+    if [[ $dns == "1" ]]; then
     apt install jq curl -y
     wget -q -O /root/cf "${ZheeVPN}ssh/cf" >/dev/null 2>&1
     chmod +x /root/cf
     bash /root/cf | tee /root/install.log
     print_success "Domain Random Done" ;;
-2)  clear ;
+    elif [[ $dns == "2" ]]; then
     read -rp "Enter Your Domain / masukan domain : " dom
     read -rp "Input ur ns-domain : " -e nsdomen
     echo "IP=$dom" > /var/lib/SIJA/ipvps.conf
