@@ -1,12 +1,12 @@
 #!/bin/bash
 # ====================
-Ip_info="https://raw.githubusercontent.com/myzid/izin/main/ip"
+IPVPES="https://raw.githubusercontent.com/myzid/izin/main/ip"
 clear
 ipsaya=$(wget -qO- ipinfo.io/ip)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
 checking_sc() {
-  useexp=$(wget -qO- $Ip_info | grep $ipsaya | awk '{print $3}')
+  useexp=$(wget -qO- $IPVPES | grep $ipsaya | awk '{print $3}')
   if [[ $date_list < $useexp ]]; then
     echo -ne
   else
@@ -26,62 +26,28 @@ checking_sc() {
 checking_sc
 clear
 
-BURIQ () {
-    curl -sS ${Ip_info}
-    data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
-    for user in "${data[@]}"
-    do
-    exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
-    d1=(`date -d "$exp" +%s`)
-    d2=(`date -d "$biji" +%s`)
-    exp2=$(( (d1 - d2) / 86400 ))
-    if [[ "$exp2" -le "0" ]]; then
-    echo $user > /etc/.$user.ini
-    else
-    rm -f /etc/.$user.ini > /dev/null 2>&1
-    fi
-    done
-    rm -f /root/tmp
+rm -f /usr/bin/user
+username=$(curl ${IPVPES} | grep $MYIP | awk '{print $2}')
+echo "$username" >/usr/bin/user
+expx=$(curl ${IPVPES} | grep $MYIP | awk '{print $3}')
+echo "$expx" >/usr/bin/e
+# DETAIL ORDER
+username=$(cat /usr/bin/user)
+oid=$(cat /usr/bin/ver)
+exp=$(cat /usr/bin/e)
+clear
+# CERTIFICATE STATUS
+d1=$(date -d "$valid" +%s)
+d2=$(date -d "$today" +%s)
+certifacate=$(((d1 - d2) / 86400))
+# VPS Information
+DATE=$(date +'%Y-%m-%d')
+datediff() {
+    d1=$(date -d "$1" +%s)
+    d2=$(date -d "$2" +%s)
+    echo -e "$COLOR1 $NC Expiry In   : $(( (d1 - d2) / 86400 )) Days"
 }
-
-MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS ${Ip_info} | grep $MYIP | awk '{print $2}')
-echo $Name > /usr/local/etc/.$Name.ini
-CekOne=$(cat /usr/local/etc/.$Name.ini)
-
-Bloman () {
-if [ -f "/etc/.$Name.ini" ]; then
-CekTwo=$(cat /etc/.$Name.ini)
-    if [ "$CekOne" = "$CekTwo" ]; then
-        res="Expired"
-    fi
-else
-res="Permission Accepted..."
-fi
-}
-
-PERMISSION () {
-    MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS ${Ip_info} | awk '{print $4}' | grep $MYIP)
-    if [ "$MYIP" = "$IZIN" ]; then
-    Bloman
-    else
-    res="Permission Denied!"
-    fi
-    BURIQ
-}
-red='\e[1;31m'
-green='\e[1;32m'
-NC='\e[0m'
-green() { echo -e "\\033[32;1m${*}\\033[0m"; }
-red() { echo -e "\\033[31;1m${*}\\033[0m"; }
-PERMISSION
-
-if [ "$res" = "Expired" ]; then
-Exp="\e[36mExpired\033[0m"
-else
-Exp=$(curl -sS ${Ip_info} | grep $MYIP | awk '{print $3}')
-fi
+mai="datediff "$Exp" "$DATE""
 
 # =========================================
 vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
@@ -309,8 +275,8 @@ echo -e "${BICyan} │  ${BICyan}[${BIWhite}07${BICyan}] BACKUP  ${BICyan}[${BIY
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
 echo -e "        ${BICyan}┌─────────────────────────────────────┐${NC}"
 echo -e "        ${BICyan}│$NC Version       : V1.01${NC}"
-echo -e "        ${BICyan}│$NC ${GREEN}User          :\033[1;36m $Name \e[0m"
-echo -e "        ${BICyan}│$NC License      : ${GREEN}$sisa_hari$NC Days Tersisa $NC"
+echo -e "        ${BICyan}│$NC ${GREEN}User          :\033[1;36m $username \e[0m"
+echo -e "        ${BICyan}│$NC Expired       : ${GREEN}$exp $NC"
 echo -e "        ${BICyan}└─────────────────────────────────────┘${NC}"
 echo
 read -p " Select menu : " opt
