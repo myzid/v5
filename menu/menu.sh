@@ -27,10 +27,10 @@ checking_sc
 clear
 
 rm -f /usr/bin/user
-username=$(curl ${IPVPES} | grep $MYIP | awk '{print $2}')
-echo "$username" >/usr/bin/user
-expx=$(curl ${IPVPES} | grep $MYIP | awk '{print $3}')
-echo "$expx" >/usr/bin/e
+username=$(curl https://raw.githubusercontent.com/myzid/izin/main/ip | grep $MYIP | awk '{print $2}')
+echo "$username" > /usr/bin/user
+expx=$(curl https://raw.githubusercontent.com/myzid/izin/main/ip | grep $MYIP | awk '{print $3}')
+echo "$expx" > /usr/bin/e
 # DETAIL ORDER
 username=$(cat /usr/bin/user)
 oid=$(cat /usr/bin/ver)
