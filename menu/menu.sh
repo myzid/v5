@@ -276,7 +276,7 @@ echo -e "${BICyan} └───────────────────�
 echo -e "        ${BICyan}┌─────────────────────────────────────┐${NC}"
 echo -e "        ${BICyan}│$NC Version       : V1.01${NC}"
 echo -e "        ${BICyan}│$NC ${GREEN}User          :\033[1;36m $username \e[0m"
-echo -e "        ${BICyan}│$NC Expired       : ${GREEN}$exp $NC"
+echo -e "        ${BICyan}│$NC Expired       : ${GREEN}$expx $NC"
 echo -e "        ${BICyan}└─────────────────────────────────────┘${NC}"
 echo
 read -p " Select menu : " opt
