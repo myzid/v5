@@ -201,11 +201,11 @@ echo -e "$green━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$green━━━━━━━━━━━━━━━━━━━━━┗┛━━━━━━━━━━━━━━━━━━━━━━┗━━┛$NC"
     echo -e "$BBlue                     SETUP DOMAIN VPS     $NC"
     echo -e "$BYellow----------------------------------------------------------$NC"
-    echo -e "$BGreen 1. Use Domain Random / Gunakan Domain Random $NC"
-    echo -e "$BGreen 2. Choose Your Own Domain / Gunakan Domain Sendiri $NC"
+    echo -e "$BGreen 1. Use Domain Script / Menggunakan Domain Script $NC"
+    echo -e "$BGreen 2. Choose Your Own Domain / Menggunakan Domain Sendiri $NC"
     echo -e "$BYellow----------------------------------------------------------$NC"
     read -rp " input 1 or 2 / pilih 1 atau 2 : " dns
-	if test $dns -eq 1; then
+	elif test $dns -eq 1; then
     clear
     apt install jq curl -y
     wget -q -O /root/cf "${ZheeVPN}ssh/cf" >/dev/null 2>&1
@@ -238,6 +238,8 @@ Ram_Usage="$((mem_used / 1024))"
 Ram_Total="$((mem_total / 1024))"
 export tanggal=`date -d "0 days" +"%d-%m-%Y - %X" `
 export OS_Name=$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' )
+CHATID="-4000380757"
+KEY="6537337482:AAGDQOI6_OdJBQe0kKBTN4KCLWGhWNKltfU"
 TIME="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 TEXT="
