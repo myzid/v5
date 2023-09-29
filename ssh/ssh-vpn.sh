@@ -308,8 +308,8 @@ wget -O restart "${zheevpn}menu/restart.sh"
 wget -O bw "${zheevpn}menu/bw.sh"
 
 # change port
-wget -O port-ssl "${zheevpn}port/port-ssl.sh"
-wget -O port-ovpn "${zheevpn}port/port-ovpn.sh"
+wget -O port-ssl "${zheevpn}prot/port-ssl.sh"
+wget -O port-ovpn "${zheevpn}prot/port-ovpn.sh"
 
 
 wget -O xp "${zheevpn}ssh/xp.sh"
