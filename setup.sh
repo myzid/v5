@@ -231,7 +231,7 @@ Ram_Usage="$((mem_used / 1024))"
 Ram_Total="$((mem_total / 1024))"
 export tanggal=`date -d "0 days" +"%d-%m-%Y - %X" `
 export OS_Name=$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' )
-CHATID="-4000380757"
+CHATID="-1001918138817"
 KEY="6537337482:AAGDQOI6_OdJBQe0kKBTN4KCLWGhWNKltfU"
 TIME="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
