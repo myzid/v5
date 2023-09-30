@@ -4,13 +4,13 @@ apt install jq curl -y
 rm -rf /root/xray/scdomain
 mkdir -p /root/xray
 clear
-read -rp "Sub Domain (Contoh: Zhee11): " -e sub
+read -rp "Masukan Nama DomainMu (Contoh: Zhee11) ! : " -e sub
 subsl=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-DOMAIN=zvx.my.id
-SUB_DOMAIN=${sub}.zvx.my.id
-NS_DOMAIN=dns-${subsl}.zvx.my.id
-CF_ID=mezzqueen293@gmail.com
-CF_KEY=e03f30d53ad7ec2ab54327baa5e2da5ab44f0
+DOMAIN=rstore-vpn.cloud
+SUB_DOMAIN=vvip.${sub}.rstore-vpn.cloud
+NS_DOMAIN=dns-${subsl}.rstore-vpn.cloud
+CF_ID=ridwanstoreaws@gmail.com
+CF_KEY=4ecfe9035f4e6e60829e519bd5ee17d66954f
 set -euo pipefail
 IP=$(curl -sS ifconfig.me);
 echo "Updating DNS for ${SUB_DOMAIN}..."
