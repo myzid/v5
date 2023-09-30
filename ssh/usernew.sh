@@ -93,5 +93,5 @@ echo -e "PATCH / HTTP/1.1[crlf]Host: [host][crlf]Host: bug.com[crlf]Upgrade: web
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 fi
 echo "" | tee -a /etc/log-create-user.log
-read -n 1 -s -r -p "Press [Enter] Back To Menu"
-menu
+read -n 1 -s -r -p "Press any key to back on menu"
+menu-ssh
