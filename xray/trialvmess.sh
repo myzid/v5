@@ -1,11 +1,12 @@
 #!/bin/bash
 clear
-function tvmess(){
-    exp=$(grep -wE "^### $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
-	sed -i "/^### $user $exp/,/^},{/d" /etc/vmess/.vmess.db
-	sed -i "/^### $user $exp/,/^},{/d" /etc/xray/config.json
-	sed -i "/^### $user $exp/,/^},{/d" /etc/xray/config.json
-}
+tvmess()(
+exp=$(grep -wE "^### $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
+sed -i "/^### $user $exp/,/^},{/d" /etc/xray/config.json
+sed -i "/^### $user $exp/,/^},{/d" /etc/xray/config.json
+rm -f /etc/xray/vmess-$user-tls.json /etc/xray/vmess-$user-nontls.json
+systemctl restart xray.service
+)
 clear
 echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
 echo -e " Set Expired ( Menit )           "
