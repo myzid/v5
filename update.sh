@@ -40,6 +40,8 @@ wget -q -O /usr/bin/cek-vless "${zheevpn}xray/cek-vless.sh"
 wget -q -O /usr/bin/renew-vless "${zheevpn}xray/renew-vless.sh"
 wget -q -O /usr/bin/trialvless "${zheevpn}xray/trialvless.sh"
 wget -q -O /usr/bin/menu-trial "${zheevpn}menu/menu-trial.sh"
+wget -q -O /usr/bin/xmenu "${zheevpn}menu/xmenu.sh"
+wget -q -O /usr/bin/tmenu "${zheevpn}menu/tmenu.sh" 
 chmod +x /usr/bin/usernew
 chmod +x /usr/bin/auto-reboot
 chmod +x /usr/bin/restart
@@ -80,6 +82,8 @@ chmod +x /usr/bin/cek-vless
 chmod +x /usr/bin/renew-vless
 chmod +x /usr/bin/trialvless
 chmod +x /usr/bin/menu-trial
+chmod +x /usr/bin/xmenu
+chmod +x /usr/bin/tmenu
 }
 
 clear
