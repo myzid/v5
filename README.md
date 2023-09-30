@@ -4,6 +4,6 @@
 # `UPDATE SCRIPT`
 <pre><code>wget https://raw.githubusercontent.com/myzid/v5/main/update.sh && chmod +x update.sh && ./update.sh</pre></code>
 
-### Support OS
+## Support OS
 - Ubuntu 20.04 LTS ( Disarankan )
 - Debian 9/10
