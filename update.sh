@@ -2,6 +2,7 @@
 res1(){
 zheevpn="https://raw.githubusercontent.com/myzid/v5/main/"
 cd /usr/bin
+wget -q -O /usr/bin/deltrial "${zheevpn}xray/deltrial.sh"
 wget -q -O /usr/bin/usernew "${zheevpn}ssh/usernew.sh"
 wget -q -O /usr/bin/auto-reboot "${zheevpn}menu/auto-reboot.sh"
 wget -q -O /usr/bin/restart "${zheevpn}menu/restart.sh"
@@ -42,6 +43,7 @@ wget -q -O /usr/bin/trialvless "${zheevpn}xray/trialvless.sh"
 wget -q -O /usr/bin/menu-trial "${zheevpn}menu/menu-trial.sh"
 wget -q -O /usr/bin/xmenu "${zheevpn}menu/xmenu.sh"
 wget -q -O /usr/bin/tmenu "${zheevpn}menu/tmenu.sh" 
+chmod +x /usr/bin/deltrial
 chmod +x /usr/bin/usernew
 chmod +x /usr/bin/auto-reboot
 chmod +x /usr/bin/restart
