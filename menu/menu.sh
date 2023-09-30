@@ -293,13 +293,13 @@ echo -e "${BICyan} └───────────────────�
 echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "   ${BICyan}     STUNNEL ${NC}: $resst" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BICyan} │  ${BICyan}[${BIWhite}01${BICyan}] SSH     ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}  [${BIWhite}08${BICyan}] ADD-HOST        ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}   │${NC}"
-echo -e "${BICyan} │  ${BICyan}[${BIWhite}02${BICyan}] VMESS   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}  [${BIWhite}09${BICyan}] RUNNING         ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}   │${NC}"
-echo -e "${BICyan} │  ${BICyan}[${BIWhite}03${BICyan}] VLESS   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}  [${BIWhite}10${BICyan}] INSTALL UDP     ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}   │${NC}"
-echo -e "${BICyan} │  ${BICyan}[${BIWhite}04${BICyan}] TROJAN  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}  [${BIWhite}11${BICyan}] INSTALL BOT     ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}   │${NC}"
-echo -e "${BICyan} │  ${BICyan}[${BIWhite}05${BICyan}] SETING  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}  [${BIWhite}12${BICyan}] LOCKED SSH      ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}   │${NC}"
-echo -e "${BICyan} │  ${BICyan}[${BIWhite}06${BICyan}] TRIALL  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}  [${BIWhite}13${BICyan}] UNLOCK SSH      ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}   │${NC}"
-echo -e "${BICyan} │  ${BICyan}[${BIWhite}07${BICyan}] BACKUP  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}  [${BIWhite}14${BICyan}] UPDATE SCRIPT   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}   │${NC}"
+echo -e "${BICyan} │  ${BICyan}[${BIWhite}01${BICyan}] SSH     ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}  [${BIWhite}08${BICyan}] RUNNING         ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}   │${NC}"
+echo -e "${BICyan} │  ${BICyan}[${BIWhite}02${BICyan}] XRAY    ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}  [${BIWhite}09${BICyan}] INSTALL UDP     ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}   │${NC}"
+echo -e "${BICyan} │  ${BICyan}[${BIWhite}03${BICyan}] TROJAN  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}  [${BIWhite}10${BICyan}] INSTALL BOT     ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}   │${NC}"
+echo -e "${BICyan} │  ${BICyan}[${BIWhite}04${BICyan}] TRIAL   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}  [${BIWhite}11${BICyan}] LOCKED SSH      ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}   │${NC}"
+echo -e "${BICyan} │  ${BICyan}[${BIWhite}05${BICyan}] BACKUP  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}  [${BIWhite}12${BICyan}] UNLOCK SSH      ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}   │${NC}"
+echo -e "${BICyan} │  ${BICyan}[${BIWhite}06${BICyan}] SETTING ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}  [${BIWhite}13${BICyan}] UPDATE SCRIPT   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}   │${NC}"
+echo -e "${BICyan} │  ${BICyan}[${BIWhite}07${BICyan}] ADD-HOST${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}  [${BIWhite}•x${BICyan}] EXIT SCRIPT     ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""${BICyan}   │${NC}"
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
 echo -e "        ${BICyan}┌─────────────────────────────────────┐${NC}"
 echo -e "        ${BICyan}│$NC Version       : V1.01${NC}"
@@ -311,18 +311,18 @@ read -p " Select menu : " opt
 echo -e ""
 case $opt in
 1) clear ; checking_sc ; menu-ssh ;;
-2) clear ; checking_sc ; menu-vmess ;;
-3) clear ; checking_sc ; menu-vless ;;
-4) clear ; checking_sc ; menu-trojan ;;
-5) clear ; checking_sc ; menu-set ;;
-6) clear ; checking_sc ; menu-trial ;;
-7) clear ; checking_sc ; menu-backup ;;
-8) clear ; checking_sc ; add-host ;;
-9) clear ; checking_sc ; running ;;
-10) clear ; checking_sc ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
-11) clear ; checking_sc ; xolpanel ;;
-12) clear ; checking_sc ; lock ;;
-13) clear ; checking_sc ; unlock ;;
+2) clear ; checking_sc ; xmenu ;;
+3) clear ; checking_sc ; tmenu ;;
+4) clear ; checking_sc ; menu-trial ;;
+5) clear ; checking_sc ; menu-backup ;;
+6) clear ; checking_sc ; menu-set ;;
+7) clear ; checking_sc ; add-host ;;
+8) clear ; checking_sc ; running ;;
+9) clear ; checking_sc ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
+10) clear ; checking_sc ; xolpanel ;;
+11) clear ; checking_sc ; lock ;;
+12) clear ; checking_sc ; unlock ;;
+13) clear ; checking_sc ; wget ${zheevpn} && chmod +x update.sh && ./update.sh ;;
 14) clear ; checking_sc ; wget ${zheevpn} && chmod +x update.sh && ./update.sh ;;
 0) clear ; checking_sc ; menu ;;
 x) exit ;;
