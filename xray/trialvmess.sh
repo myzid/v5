@@ -1,3 +1,12 @@
+#!/bin/bash
+clear
+function tvmess(){
+    exp=$(grep -wE "^### $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
+	sed -i "/^### $user $exp/,/^},{/d" /etc/vmess/.vmess.db
+	sed -i "/^### $user $exp/,/^},{/d" /etc/xray/config.json
+	sed -i "/^### $user $exp/,/^},{/d" /etc/xray/config.json
+}
+clear
 echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
 echo -e " Set Expired ( Menit )           "
 echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
@@ -71,7 +80,7 @@ systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
 
-echo "./deltrial vmess ${user}" | at now +$pup minutes &> /dev/null
+echo "tvmess ${user}" | at now +$pup minutes &> /dev/null
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[40;1;37m       Trial Xray/Vmess      \E[0m"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
