@@ -86,10 +86,10 @@ clear
 echo -e "\033[1;93m┌─────────────────────────────────────────────────┐\033[0m"
 echo -e "\033[1;93m│                • TROJAN MENU •                  \033[1;93m│"
 echo -e "\e[33m└─────────────────────────────────────────────────┘\033[0m"
-echo -e "  XRAYS Trojan            :$status_virus_trojan"
-echo -e "  Trojan GO               :$status_trgo"
-echo -e "  V2RAY Trojan            :$status_trgo"
-echo -e "  GRPC STATUS             :$status_virus_trojan"
+echo -e "  XRAYS Trojan WS         :$status_virus_trojan"
+echo -e "  XRAYS Trojan GO         :$status_trgo"
+echo -e "  XRAYS Trojan GO         :$status_trgo"
+echo -e "  XRAYS Trojan GRPC       :$status_virus_trojan"
 echo -e "\033[1;93m┌─────────────────────────────────────────────────┐\033[0m"
 echo -e "${BICyan}\033[0m ${BOLD}          ${GREEN}FN  ${BIYellow} TROJAN    TROJAN GO ${GREEN}FN $NC "
 echo -e "${BICyan}\033[0m ${Blue}                  $tra         $ssa $NC"
@@ -105,7 +105,7 @@ echo -e " [\e[36m•05\e[0m] Cek User Trojan Ws       [\e[36m•10\e[0m] Cek Use
 echo -e ""
 echo -e " [\e[36m•0\e[0m] Back To Menu            [\e[36m•x\e[0m] Exit"
 echo -e ""
-echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[1;93m"
+echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[1;93m" | lolcat
 echo -e ""
 read -p " Select menu :  "  opt
 case $opt in
