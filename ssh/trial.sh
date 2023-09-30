@@ -70,11 +70,10 @@ echo -e "SSH-UDP     : 1-65535" | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 #echo -e "OpenVPN Config : http://$IP:81/" | tee -a /etc/log-create-user.log
 #echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Payload Websocket" | tee -a /etc/log-create-user.log
+echo -e "Payload Websocket : " | tee -a /etc/log-create-user.log
 echo -e "GET wss://[host]/ [protocol][crlf]Host: [host][crlf]Upgrade: websocket[crlf][crlf]" | tee -a /etc/log-create-user.log
 echo -e ""
-echo -e "Payload ( Enhanced )" | tee -a /etc/log-create-user.log
+echo -e "Payload ( Enhanced ) : " | tee -a /etc/log-create-user.log
 echo -e "PATCH / HTTP/1.1[crlf]Host: [host][crlf]Host: bug.com[crlf]Upgrade: websocket[crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf][crlf]" | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 else
@@ -98,10 +97,10 @@ echo -e "Port Ssh UDP : 1-65535" | tee -a /etc/log-create-user.log
 #echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 #echo -e "OpenVPN Config : http://$IP:81/" | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Payload Websocket" | tee -a /etc/log-create-user.log
+echo -e "Payload Websocket : " | tee -a /etc/log-create-user.log
 echo -e "GET wss://[host]/ [protocol][crlf]Host: [host][crlf]Upgrade: websocket[crlf][crlf]" | tee -a /etc/log-create-user.log
 echo -e ""
-echo -e "Payload ( Enhanced )" | tee -a /etc/log-create-user.log
+echo -e "Payload ( Enhanced ) : " | tee -a /etc/log-create-user.log
 echo -e "PATCH / HTTP/1.1[crlf]Host: [host][crlf]Host: bug.com[crlf]Upgrade: websocket[crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf][crlf]" | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 fi
