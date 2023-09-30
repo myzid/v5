@@ -326,7 +326,7 @@ wget -O jam "${zheevpn}jam.sh"
 wget -q -O /usr/bin/xolpanel "${zheevpn}xolpanel/main/xolpanel.sh"
 wget -q -O /usr/bin/lock "${zheevpn}user-lock.sh"
 wget -q -O /usr/bin/unlock "${zheevpn}user-unlock.sh"
-wget -q -O /usr/bin/update "${zheevpn}update.sh"
+wget -q -O /usr/bin/xmenu "${zheevpn}menu/xmenu.sh" 
 
 chmod +x menu
 chmod +x menu-trial
@@ -375,7 +375,7 @@ chmod +x jam
 chmod +x /usr/bin/xolpanel
 chmod +x /usr/bin/lock
 chmod +x /usr/bin/unlock
-chmod +x /usr/bin/update
+chmod +x /usr/bin/xmenu
 cd
 
 
